@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { ShowIncrement } from "./ShowIncrement";
 
-//useCallback: memoiza funciones, es un hook |
+//useCallback: memoriza funciones, es un hook |
 //useMemo: memoiza valores, es un hook |
 //memo: memoiza componentes, es un HOC.
 

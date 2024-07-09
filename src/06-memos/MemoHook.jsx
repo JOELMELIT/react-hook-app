@@ -17,7 +17,7 @@ export const MemoHook = () => {
     const { counter, increment} = useCounter(4000);
     const [ show, setShow ] = useState(true);
 
-    // useMemo va a memorizar lo que sea que retorne, y el valor memorizado (ejemplo memorizedValue) se va a mantener asi a menos que las dependencias([counter]) de useMemo cambien.
+    // useMemo va a memorizar lo que sea que retorne, y el valor memorizado (ejemplo memorizedValue) se va a mantener asi a menos que las condiciones de la dependencia([counter]) de useMemo cambien.
     const memorizedValue = useMemo(() => heavyStuff(counter), [counter]);
    
 

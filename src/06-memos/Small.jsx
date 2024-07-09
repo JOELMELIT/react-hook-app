@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 //useCallback: memoiza funciones, es un hook |
-//useMemo: memoiza valores, es un hook |
+//useMemo: memoriza valores, es un hook |
 //memo: memoriza componentes, es un HOC.
 
 
