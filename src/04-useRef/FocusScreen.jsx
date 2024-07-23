@@ -16,7 +16,7 @@ export const FocusScreen = () => {
         <hr />
 
         <input 
-            ref={ inputRef }
+            ref={ inputRef } // sintaxis especial de React
             type="text" 
             placeholder="Ingrese su nombre"
             className="form-control"

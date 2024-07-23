@@ -2,9 +2,10 @@ import { useMemo, useState } from "react";
 import { useCounter } from "../hooks"
 
 //useCallback: memoiza funciones, es un hook |
-//useMemo: memoiza valores, es un hook |
+//useMemo: memoriza valores de retorno, es un hook |
 //memo: memoiza componentes, es un HOC.
 
+// La funcion de heavyStuff la colocamos fuera del MemoHook con la finalidad de que no se vuelva a crear la referencia en memoria cada vez que se renderiza el componente.
 const heavyStuff = ( iterationNumber = 100) => {
     for (let i = 0; i < iterationNumber; i++) {
         console.log('Ahí vamos...');

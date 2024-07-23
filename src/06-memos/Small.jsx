@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 //useCallback: memoiza funciones, es un hook |
-//useMemo: memoriza valores, es un hook |
+//useMemo: memoriza valores de retorno, es un hook|
 //memo: memoriza componentes, es un HOC.
 
 
@@ -28,3 +28,5 @@ export const Small = React.memo(({ value }) => {
   )
 })
 */
+
+// React.memo - solo funciona esta sintaxis cuando se trata de un proyecto creado con CRA o que tenga la referencia de React de manera Global

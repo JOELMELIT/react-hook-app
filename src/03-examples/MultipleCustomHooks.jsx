@@ -38,7 +38,7 @@ export const MultipleCustomHooks = () => {
         >Anterior</button>
         <button
             className="btn btn-primary mt-2"
-            onClick={ () => increment() }
+            onClick={ () => increment() } // onClick={ increment } - El evento onClick por defecto va a a emitir un evento como argumento, por esa razon es mejor llamarlo de la manera de onClick={ () => increment() }
         >Siguiente</button>
 
         <hr />

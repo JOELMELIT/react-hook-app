@@ -16,7 +16,7 @@ export const SimpleForm = () => {
 
         setFormState({
             ...formState,
-            [ name ]: value
+            [ name ]: value  // Propiedad computada de los objetos
         });
     }
 
