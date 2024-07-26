@@ -24,7 +24,7 @@ export const TodoAdd = ({ onNewTodo }) => {
             done: false,
         }
 
-        // Se lee asi: sí la funcion onNewTodo existe proveniente el proptypes entonces la ejecutamos
+        // Se lee asi: sí la funcion onNewTodo existe proveniente del proptypes entonces la ejecutamos
         onNewTodo && onNewTodo(newTodo);
         onResetForm();
     }
@@ -36,21 +36,21 @@ export const TodoAdd = ({ onNewTodo }) => {
         {/* TodoAdd onNewTodo( todo ) */}
         {/* { id: new Date()..., description: '', done: false } */}
         <form onSubmit={ onFormSubmit }>
-        <input 
-            type="text"
-            placeholder="¿Qué hay que hacer?"
-            className="form-control"
-            name="description"
-            value={ description }
-            onChange={ onInputChange }
-        />
+            <input 
+                type="text"
+                placeholder="¿Qué hay que hacer?"
+                className="form-control"
+                name="description"
+                value={ description }
+                onChange={ onInputChange }
+            />
 
-        <button
-            type="submit"
-            className="btn btn-outline-primary mt-3"
-        >
-            Agregar
-        </button>
+            <button
+                type="submit"
+                className="btn btn-outline-primary mt-3"
+            >
+                Agregar
+            </button>
 
         </form>
         {/* Fin TodoAdd */}

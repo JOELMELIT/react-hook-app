@@ -51,9 +51,9 @@ export const TodoApp = () => {
 
 // DEBIDO A LA TAREA "USETODO" SOLICITADO EN EL VIDEO 151 VAMOS A REDUCIR EL CODIGO DE ARRIBA, PERO MANTENEMOS COMENTADO EL CODIGO TYPEADO EN ANTERIORES VIDEOS
 
-{/* Se comenta de la linea 108 a la 124
+{/* Se comenta de la linea 56 a la 67
 
-    const initialState = [
+    const initialState  = [
       {
         id: new Date().getTime(),
         description: 'Recolectar la piedra del alma',
@@ -66,15 +66,14 @@ export const TodoApp = () => {
       }
     ]
 
-
 */}
 
 
-/* Se comenta de la linea 127 a la 212
+/* Se comenta de la linea 74 a la 152
 
 const init = () =>{
   // Intenta Parsear todo lo que viene del atributo "todos" del local storage pero en caso de no existir registros retornar un arreglo vacio "|| []"
-  return JSON.parse( localStorage.getItem('todos') || [] );
+  return JSON.parse( localStorage.getItem('todos')) || [];
 }
 
 export const TodoApp = () => {
@@ -87,7 +86,7 @@ export const TodoApp = () => {
   // Vamos a almacenar datos en el localStorage, utilizando el useEffect primeramente para que se ejecute al cargar la pagina y muestre la lista de "todos" que en ese momento se encuentren almacenados en el localStorage y posteriormente si se agregan nuevos "todos" volver a lanzar el useEffect para almacenar los nuevos datos
   useEffect(() => {
     // El local Storage no puede almacenar datos como objeto por eso se transformar a formato JSON para ser almacenados
-    localStorage.setItem('todos', JSON.stringify(todos || []));
+    localStorage.setItem('todos', JSON.stringify( todos ) || []);
   }, [todos])
   
 

@@ -27,7 +27,8 @@ import { MainApp } from './09-useContext/MainApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <BrowserRouter>
+  // BrowserRouter es un HOC (Higher Order Component) - Es un componente que recibe otros componentes dentro de él.
+  <BrowserRouter> 
     {/* <React.StrictMode> */}
       <MainApp />
     {/* </React.StrictMode>, */}
