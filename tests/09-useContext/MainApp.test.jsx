@@ -8,7 +8,7 @@ describe('Pruebas en <MainApp />', () => {
     test('debe de mostrar el HomePage', () => {
 
         render(
-            // El MemoryRouter ya nos proporciona los elementos necesarios para nuestras pruebas para pode emular el <BrowserRouter/>
+            // El MemoryRouter ya nos proporciona los elementos necesarios, useHref, useLocation, etc..  para nuestras pruebas para pode emular el <BrowserRouter/>
             <MemoryRouter>
                 <MainApp/>
             </MemoryRouter>

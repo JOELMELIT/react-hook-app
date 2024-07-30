@@ -2,7 +2,7 @@ import { fireEvent, getByLabelText, getByRole, render, screen } from "@testing-l
 import { TodoItem } from "../../src/08-useReducer/TodoItem";
 
 
-describe('Pruevas en el componente <TodoItem />', () => { 
+describe('Pruebas en el componente <TodoItem />', () => { 
 
     const todo = {
         id: 1,
@@ -23,11 +23,12 @@ describe('Pruevas en el componente <TodoItem />', () => {
     test('debe de mostrar el TODO pendiente de completar', () => {
 
         render(
-                <TodoItem 
-                    todo= { todo } 
-                    onToggleTodo= { onToggleTodoMock } 
-                    onDeleteTodo= { onDeleteTodoMock }
-                />);
+            <TodoItem 
+                todo= { todo } 
+                onToggleTodo= { onToggleTodoMock } 
+                onDeleteTodo= { onDeleteTodoMock }
+            />
+        );
         
         const liElement = screen.getByRole('listitem');
         //console.log(liElement.innerHTML);
@@ -46,11 +47,12 @@ describe('Pruevas en el componente <TodoItem />', () => {
         todo.done = true;
 
         render(
-                <TodoItem 
-                    todo= { todo } 
-                    onToggleTodo= { onToggleTodoMock } 
-                    onDeleteTodo= { onDeleteTodoMock }
-                />);
+            <TodoItem 
+                todo= { todo } 
+                onToggleTodo= { onToggleTodoMock } 
+                onDeleteTodo= { onDeleteTodoMock }
+            />
+        );
         
         const spanElement = screen.getByLabelText('spann');
         expect( spanElement.className ).toContain('text-decoration-line-through');
@@ -65,7 +67,8 @@ describe('Pruevas en el componente <TodoItem />', () => {
                 todo= { todo } 
                 onToggleTodo= { onToggleTodoMock } 
                 onDeleteTodo= { onDeleteTodoMock }
-            />);
+            />
+        );
         
         const spanElement = screen.getByLabelText('spann');
         fireEvent.click( spanElement );
@@ -81,7 +84,8 @@ describe('Pruevas en el componente <TodoItem />', () => {
                 todo= { todo } 
                 onToggleTodo= { onToggleTodoMock } 
                 onDeleteTodo= { onDeleteTodoMock }
-            />);
+            />
+        );
         
 
         screen.debug(); 

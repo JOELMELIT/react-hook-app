@@ -41,6 +41,7 @@ describe('Pruebas en <HomePage />', () => {
         //console.log( preTag.innerHTML );
 
         expect( preTag.innerHTML ).toContain( user.name );
+        expect( preTag.innerHTML ).toContain( user.name.toString );
         expect( preTag.innerHTML ).toContain( `${ user.id }` );
 
     });
