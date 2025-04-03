@@ -17,7 +17,7 @@ export const CallbackHook = () => {
     )
 
 
-    // Tener en cuenta que si dentro de un useEffect llamamos la funcion incrementFather y no se esta usando el memo dentro de ShowIncrement, la funcion incrementFather siempre seria diferente, provocando un bucle
+    // Tener en cuenta que si dentro de un useEffect llamamos la funcion incrementFather y no se esta usando el memo dentro de ShowIncrement.jsx, la funcion incrementFather siempre seria diferente, provocando un bucle
     useEffect(() => {
       //incrementFather();
     }, [incrementFather])

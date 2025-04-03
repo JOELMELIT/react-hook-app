@@ -20,7 +20,14 @@ export const SimpleForm = () => {
         });
     }
 
+    
+    // Esto indica que será llamado siempre que exista algun cambio en el state
+    /*useEffect(() => {
+        //console.log('useEffect called!');
+    });*/
 
+
+    // Si no ponemos nada dentro de nuestra lista de dependencias [], le estamos indicando que solo sea llamado una unica vez al ser montado nuestro componente
     useEffect(() => {
         //console.log('useEffect called!');
     },[]);

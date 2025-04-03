@@ -7,7 +7,7 @@ const initialState = [{
 }];
 
 
-// Un Reducer es una funcion pura que regresa un state, el action es lo que le dice al Reducer como queremos cambiar el state, siempre se retorna un nuevo estado
+// Un Reducer es una funcion pura que regresa un nuevo state, el action es lo que le dice al Reducer como queremos cambiar el state, siempre se retorna un nuevo estado
 const todoReducer = ( state = initialState, action = {}) => {
 
     // Regresando un nuevo state
@@ -24,9 +24,9 @@ let todos = todoReducer();
 
 // Si queremos hacer una modificacion al state, para este ejemplo agregando un nuevo objeto al arreglo, las siguientes lineas no deberian hacerse ya que eso es una mutacion del arreglo y eso no esta permitido
 /*
-    todos.push({
+    to-dos.push({
         id: 2,
-        todo: 'Recolectar la piedra del Poder',
+        to-do: 'Recolectar la piedra del Poder',
         done: false
     })
 */
@@ -44,7 +44,7 @@ const addTodoAction = {
     payload: newTodo,           // El payload es la carga que esta en la accion
 }
 
-todos = todoReducer( todos, addTodoAction);
+todos = todoReducer( todos, addTodoAction); // Se manda la acción de agregar el nuevo todo a través del addTodoAction
 
 
 

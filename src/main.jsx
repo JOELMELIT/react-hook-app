@@ -22,12 +22,12 @@ import './08-useReducer/intro-reducer.js';
 
 import { TodoApp } from './08-useReducer/TodoApp'
 import { MainApp } from './09-useContext/MainApp';
-
+//import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  // BrowserRouter es un HOC (Higher Order Component) - Es un componente que recibe otros componentes dentro de él.
+  // BrowserRouter es un HOC (Higher Order Component) - Es un componente que recibe otros componentes dentro de él. El uso del BrowserRouter nos va a permitir que todos los hijos del mismo, puedan acceder a la informacion proporcionada por el componente padre "BrowserRouter", estre browser nos provee del Router, Navigation.Provider y el Location.Provider
   <BrowserRouter> 
     {/* <React.StrictMode> */}
       <MainApp />

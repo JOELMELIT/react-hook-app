@@ -28,6 +28,8 @@ export const useFetch = ( url ) => {
     // Petición HTTP
     const getFetch = async () =>{
 
+        //console.log(localCache);
+
         if(localCache[url]){
             console.log('Usando caché')
             setState({

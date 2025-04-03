@@ -5,7 +5,7 @@ import { todoReducer } from "../todoReducer";
 const initialState = [];
 
 const init = () =>{
-  return JSON.parse( localStorage.getItem('todos') || [] );
+  return JSON.parse( localStorage.getItem('todos'))  || [];
 }
 
 export const useTodos = () => {
@@ -14,7 +14,7 @@ export const useTodos = () => {
     const [todos, dispatch] = useReducer( todoReducer , initialState, init)
 
     useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos || []));
+        localStorage.setItem('todos', JSON.stringify(todos) || []);
     }, [todos])
     
     const handleNewTodo = ( todo ) => {
@@ -39,8 +39,6 @@ export const useTodos = () => {
       payload: id
       });
     }
-
-    const todosCount = todos.length;
     
     const pendingTodosCount = todos.filter( todo => !todo.done).length;
 
@@ -49,7 +47,7 @@ export const useTodos = () => {
     handleNewTodo,
     handleDeleteTodo,
     handleToggleTodo,
-    todosCount, 
+    todosCount: todos.length, // Se puede poner la lógica (todos.length) dentro del return o afuera como en el const pendingTodosCount
     pendingTodosCount,
   }
 }
